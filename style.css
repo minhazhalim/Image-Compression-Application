@@ -1,0 +1,191 @@
+* {
+     margin: 0px;
+     padding: 0px;
+     box-sizing: border-box;
+}
+html {
+     font-size: 18px;
+     font-family: Arial,Helvetica,sans-serif;
+     color: #333;
+     line-height: 1.5rem;
+}
+body {
+     background-color: skyblue;
+     background-image: url('clouds.jpg');
+     background-size: cover;
+     background-blend-mode: overlay;
+     min-height: 100vh;
+     display: flex;
+     align-items: flex-start;
+     justify-content: center;
+     padding: 1.75em 1em;
+}
+main {
+     display: flex;
+     flex-direction: column;
+     position: relative;
+     width: 100%;
+}
+header {
+     margin-top: 1rem;
+}
+.droparea {
+     margin: 1rem auto;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     width: 384px;
+     max-width: 100%;
+     height: 160px;
+     border: 2px dashed gray;
+     border-radius: 15px;
+     text-transform: capitalize;
+}
+.droparea .far {
+     font-size: 3rem;
+     padding-top: 1rem;
+}
+.droparea p:first-of-type {
+     font-weight: bolder;
+     font-size: 0.8rem;
+}
+.green-border {
+     border-color: green;
+}
+.results {
+     display: flex;
+     background-color: #fff;
+     margin: 16px auto;
+     padding: 0.7rem;
+     border: 1px solid rgb(187,203,208);
+     width: 100%;
+     max-width: 960px;
+}
+.results__list {
+     width: 100%;
+}
+.results__list li {
+     display: flex;
+     justify-content: space-between;
+     font-size: 0.8rem;
+     margin: 4px;
+     padding: 0rem 0.3rem;
+     border: 1px solid rgb(207,219,222);
+     background-color: rgb(240,240,240);
+     text-transform: capitalize;
+}
+.results__list div {
+     width: 33%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+.results__list .divDL {
+     width: 100%;
+}
+.results__list p {
+     line-height: 1.5rem;
+     white-space: nowrap;
+}
+.results__title {
+     text-overflow: ellipsis;
+     overflow: hidden;
+     padding-right: 0.3rem;
+}
+.results__bar {
+     appearance: none;
+     -webkit-appearance: none;
+     width: 33%;
+     max-width: 292px;
+     height: 30px;
+     position: relative;
+}
+::-moz-progress-bar {
+     background-color: rgb(146,237,20);
+}
+::-webkit-progress-inner-element {
+     background-color: #fff;
+     border: 1px solid rgb(207,219,222);
+     padding: 3px;
+     border-radius: 15px;
+}
+::-webkit-progress-bar {
+     background-color: #fff;
+     border-radius: 15px;
+     height: 22px;
+}
+::-webkit-progress-value {
+     background-color: rgb(146,237,20);
+     border-radius: 15px;
+}
+.finished::before {
+     position: absolute;
+     top: 8%;
+     left: 50%;
+     margin-left: -25px;
+     content: 'Finished';
+     color: rgb(54,58,67);
+     font-size: 0.7rem;
+}
+.error::before {
+     position: absolute;
+     top: 8%;
+     left: 50%;
+     margin-left: -25px;
+     content: 'Error';
+     color: rgb(54,58,67);
+     font-size: 0.7rem;
+}
+.error::-webkit-progress-value {
+     background-color: rgb(243,93,55);
+}
+.results__title,.results__download,.results__saved {
+     font-weight: bolder;
+}
+.results__size {
+     display: none;
+     color: rgb(126,182,49);
+     font-size: 0.7rem;
+     font-weight: lighter;
+     min-width: 52px;
+}
+.results__download {
+     width: 100%;
+     text-align: right;
+}
+.results__download a {
+     cursor: pointer;
+     padding-left: 0.3rem;
+     overflow: hidden;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+}
+.results__download a,.results__download a:hover,.results__download a:active,.results__download a:visited {
+     color:#333;
+}
+.results__saved {
+     display: none;
+}
+.none {
+     display: none;
+}
+.block {
+     display: block;
+}
+@media only screen and (min-width:480px){
+     .droparea p:first-of-type {
+          font-size: 1rem;
+     }
+     .results__download {
+          text-align: center;
+     }
+     .results__saved {
+          display: block;
+     }
+}
+@media only screen and (min-width:640){
+     .results__size {
+          display: block;
+     }
+}
